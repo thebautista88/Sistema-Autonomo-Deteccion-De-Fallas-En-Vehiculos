@@ -1,0 +1,51 @@
+;;; =====================================================================
+;;; SUITE AUTOMATIZADA DE PRUEBAS EN CLIPS PURO (PROYECTO 7)
+;;; Ejecuta secuencialmente los 6 casos de prueba y muestra los informes
+;;; =====================================================================
+
+(load "reglas_diagnostico.clp")
+(load "casos_de_prueba.clp")
+
+;; ---------------------------------------------------------------------
+;; CASO 1: Batería descargada con chasquido al arrancar
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-1)))
+(run)
+
+;; ---------------------------------------------------------------------
+;; CASO 2: Motor se apaga de golpe en marcha
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-2)))
+(run)
+
+;; ---------------------------------------------------------------------
+;; CASO 3: Ruido de golpeteo metálico interno
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-3)))
+(run)
+
+;; ---------------------------------------------------------------------
+;; CASO 4: Sobrecalentamiento sin electroventilador
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-4)))
+(run)
+
+;; ---------------------------------------------------------------------
+;; CASO 5: Humo blanco espeso por el escape
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-5)))
+(run)
+
+;; ---------------------------------------------------------------------
+;; CASO 6: Testigo de batería encendido en marcha
+;; ---------------------------------------------------------------------
+(reset)
+(assert (caso-activo (id caso-6)))
+(run)
+
+(exit)
